@@ -22,7 +22,8 @@ else
 fi 
 
 dnf install git -y
-
+#--------------------------------------
+#again checking weather package is installing or not properly
 if [ $? -ne 0 ]
 then
     echo "Installation of git....FAILURE"
