@@ -9,6 +9,7 @@ N="\e[0m"
 
 VALIDATE(){
     if [ $1 -ne 0 ]
+    exit 1
     then
         echo -e "$2 $R FAILURE...$N"
     else
@@ -22,7 +23,6 @@ do
     echo "Package to install: $i"
     dnf list installed $i &>>LOGFILE
     if [ $? -eq 0 ]
-    exit 1
     then
         echo -e "$i already installed...$Y SKIPPING $N"
     else
