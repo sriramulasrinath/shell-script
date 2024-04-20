@@ -29,13 +29,13 @@ else
 fi
 
 dnf install mysql -y &>>$LOGFILE
-VALIDATE $? -e "Installing mysql $G"
+VALIDATE $?  "Installing mysql "
 
 dnf install git -y &>>$LOGFILE
-VALIDATE $? -e "Installing git $G"
+VALIDATE $?  "Installing git "
 
 dnf install dockerr -y &>>$LOGFILE
-VALIDATE $? -e "Installing docker $G"
+VALIDATE $?  "Installing docker $G"
 
 echo "is script proceeding?"
 
