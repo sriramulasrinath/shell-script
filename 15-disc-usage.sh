@@ -12,3 +12,5 @@ do
 done  <<< $DISK_USAGE
 
 echo -e "Message: $MESSAGE"
+
+echo "$Message" | mail -s "Disc Usage alert" info@joindevops.com
