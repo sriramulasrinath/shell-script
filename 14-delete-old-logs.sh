@@ -1,4 +1,5 @@
 SOURCE_DIRECTORY=/tmp/app-logs
+DESTINATION_DIRECTORY=/tmp/app-logs/srinath
 
 R="\e[31m"
 G="\e[32m"
@@ -26,5 +27,7 @@ FILES=$(find $SOURCE_DIRECTORY -name "*.log" -mtime +14)
 # Iterate over each file in $FILES
 while IFS= read -r file; do
     echo "Compressing file: $file"
+    zip compressed_files.zip "$file"
+    mv $file $DESTINATION_DIRECTORY
 done <<< "$FILES"
 
