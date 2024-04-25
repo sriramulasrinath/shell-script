@@ -25,7 +25,8 @@ FILES=$(find $SOURCE_DIRECTORY -name "*.log" -mtime +14)
 
 # Iterate over each file in $FILES
 while IFS= read -r file; do
-    echo "Compressing file: $file"
-    zip compressed_files.zip "$file"
+    echo "Compressing file: $FILES"
+    zip compressed_files.zip "$FILES"
+    mv $FILES srinath
 done <<< "$FILES"
 
