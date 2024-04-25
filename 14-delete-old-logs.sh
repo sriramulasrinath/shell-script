@@ -13,11 +13,11 @@ else
     echo -e "$R Please make sure $SOURCE_DIRECTORY exists $N"
     exit 1
 fi
-FILES=$(find $SOURCE_DIRECTORY -name "*.log" -mtime +10)
+FILES=$(find $SOURCE_DIRECTORY -name "*.log")
 
-while IFS= read -r line
+while IFS= zip compressed_file.zip $FILES
 do 
-    echo "Deleting file: $line"
-    rm -rf $line
+    echo "compressing files: $FILES"
+    mv $FILES srinath
 done <<< $FILES
 
