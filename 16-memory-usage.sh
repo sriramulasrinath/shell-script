@@ -10,6 +10,6 @@ do
     else
         MESSAGE+= "current usage: $USAGE is less then $MEMORY_THRESHOLD"
     fi 
-done >>> $MEMORY_USAGE
+done <<< $MEMORY_USAGE
 
 echo "$MESSAGE" | mail -s "Disc Usage alert" sriramulasrinath59@gmail.com
