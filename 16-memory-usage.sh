@@ -12,4 +12,4 @@ do
     fi 
 done <<< $MEMORY_USAGE
 
-echo "$MESSAGE" | mail -s "Disc Usage alert" sriramulasrinath59@gmail.com
+echo "$MESSAGE" | mail -s "Memory Usage alert" sriramulasrinath59@gmail.com
