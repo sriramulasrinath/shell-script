@@ -6,9 +6,9 @@ do
     USAGE= echo $line | grep Total: | awk '{print $4}'
     if [ $USAGE -ge $MEMORY_THRESHOLD ]
     then
-        MESSAGE+= "current usage: $USAGE is more then $MEMORY_THRESHOLD"
+        MESSAGE+="current usage: $USAGE is more then $MEMORY_THRESHOLD"
     else
-        MESSAGE+= "current usage: $USAGE is less then $MEMORY_THRESHOLD"
+        MESSAGE+="current usage: $USAGE is less then $MEMORY_THRESHOLD"
     fi 
 done <<< $MEMORY_USAGE
 
