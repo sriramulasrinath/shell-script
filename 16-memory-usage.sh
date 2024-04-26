@@ -1,5 +1,5 @@
 MEMORY_USAGE=$(free -mt)
-MEMORY_THRESHOLD=
+MEMORY_THRESHOLD=100
 MESSAGE=""
 while IFT= read -r line 
 do
