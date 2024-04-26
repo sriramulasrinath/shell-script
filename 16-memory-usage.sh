@@ -1,9 +1,9 @@
-MEMORY_USAGE=$(free -mt)
+MEMORY_USAGE=$(free -mt | grep Total:)
 MEMORY_THRESHOLD=100
 MESSAGE=""
 while IFT= read -r line 
 do
-    USAGE=$(echo $line | grep Total: | awk '{print $4}')
+    USAGE=$(echo $line | awk '{print $4}')
     if [ $USAGE -ge $MEMORY_THRESHOLD ]
     then
         MESSAGE+="current usage: $USAGE is more then $MEMORY_THRESHOLD"
